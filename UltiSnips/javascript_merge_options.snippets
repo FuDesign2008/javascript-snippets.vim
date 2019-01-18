@@ -1,0 +1,27 @@
+
+extends javascript
+
+snippet mergeopt "merge options"
+const theOptions = Object.assign(
+  {},
+  {
+    // default options
+    ${VISUAL}$0
+  },
+  options,
+)
+endsnippet
+
+snippet mergeoptions "merge options deeply"
+// please npm install --save-dev merge-options
+import mergeOptions from 'merge-options'
+
+const theOptions = mergeOptions(
+  {},
+  {
+    // default options
+    ${VISUAL}$0
+  },
+  options,
+)
+endsnippet
