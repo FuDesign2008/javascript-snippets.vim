@@ -1,0 +1,71 @@
+
+extends javascript
+
+
+snippet exp "named export"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+function sample() {
+  // TODO
+  ${VISUAL}$0
+}
+
+export { sample }
+endsnippet
+
+snippet expo "export default with named var"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+function sample() {
+  // TODO
+  ${VISUAL}$0
+}
+
+export default sample
+endsnippet
+
+snippet export "default export without name"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+export default {
+  // TODO
+  ${VISUAL}$0
+}
+endsnippet
+
+
+
+snippet exportc "default export with a class"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+class Child${VISUAL}$0 extends SuperClass {
+  constructor(options) {
+    super(options)
+    // TODO
+  }
+}
+
+export default Child
+endsnippet
+
+
+
+# vim:ft=snippets:
+
+
