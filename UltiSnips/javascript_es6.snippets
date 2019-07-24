@@ -9,12 +9,12 @@ snippet exp "named export"
  * @date  `date +%Y-%m-%d`
  */
 
-function sample() {
+function `!v expand('%:t:r')`() {
   // TODO
   ${VISUAL}$0
 }
 
-export { sample }
+export { `!v expand('%:t:r')` }
 endsnippet
 
 snippet expo "export default with named var"
@@ -24,12 +24,12 @@ snippet expo "export default with named var"
  * @date  `date +%Y-%m-%d`
  */
 
-function sample() {
+function `!v expand('%:t:r')`() {
   // TODO
   ${VISUAL}$0
 }
 
-export default sample
+export default `!v expand('%:t:r')`
 endsnippet
 
 snippet export "default export without name"
@@ -47,21 +47,21 @@ endsnippet
 
 
 
-snippet exportc "default export with a class"
+snippet exportc "default export with named class"
 /**
  *
  * @author fuyg
  * @date  `date +%Y-%m-%d`
  */
 
-class Child${VISUAL}$0 extends SuperClass {
+class `!v expand('%:t:r')` extends ${VISUAL}$0{
   constructor(options) {
     super(options)
     // TODO
   }
 }
 
-export default Child
+export default `!v expand('%:t:r')`
 endsnippet
 
 

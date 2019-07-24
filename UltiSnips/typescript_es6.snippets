@@ -1,0 +1,31 @@
+extends typescript
+
+
+snippet exporti "export default with named interface"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+interface `!v expand('%:t:r')` {
+  // TODO
+  ${VISUAL}$0
+}
+
+export default `!v expand('%:t:r')`
+endsnippet
+
+snippet exportix "export default with extended interface"
+/**
+ *
+ * @author fuyg
+ * @date  `date +%Y-%m-%d`
+ */
+
+interface `!v expand('%:t:r')` extends ${VISUAL}$0 {
+  // TODO
+}
+
+export default `!v expand('%:t:r')`
+endsnippet
