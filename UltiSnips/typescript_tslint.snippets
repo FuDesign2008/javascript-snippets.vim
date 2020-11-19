@@ -3,18 +3,15 @@ extends typescript
 # @see https://palantir.github.io/tslint/usage/rule-flags/
 
 snippet tsl "disable tslint for next line"
-// tslint:disable-next-line
-// tslint:disable-next-line:rule1 rule2 rule3...
+// tslint:disable-next-line:no-console${VISUAL}$0
 endsnippet
 
 snippet tsli "disable tslint for rest of file"
-/* tslint:disable */
-/* tslint:disable:rule1 rule2 rule3... */
+/* tslint:disable:no-console ${VISUAL}$0*/
 endsnippet
 
 snippet tslin "enable tslint for rest of file"
-/* tslint:enable */
-/* tslint:enable:rule1 rule2 rule3... */
+/* tslint:enable:no-console ${VISUAL}$0*/
 endsnippet
 
 snippet tslint "disable tslint for current line"
