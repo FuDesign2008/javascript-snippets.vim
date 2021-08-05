@@ -9,12 +9,11 @@ snippet exp "named export"
  * @date  `date +%Y-%m-%d`
  */
 
-function `!v expand('%:t:r')`() {
+export function `!v expand('%:t:r')`() {
   // TODO
   ${VISUAL}$0
 }
 
-export { `!v expand('%:t:r')` }
 endsnippet
 
 snippet expo "export default with named var"

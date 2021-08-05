@@ -4,8 +4,7 @@
  * @date  `date +%Y-%m-%d`
  */
 
-function sample() {
+export function sample() {
   // TODO
 }
 
-export { sample }
