@@ -2,67 +2,42 @@
 extends javascript
 
 
-snippet exp "named export"
-/**
- *
- * @author fuyg
- * @date  `date +%Y-%m-%d`
- */
+snippet exportf "export function"
 
 export function `!v expand('%:t:r')`() {
   // TODO
-  ${VISUAL}$0
+  return {
+    // TODO
+  }
 }
 
 endsnippet
 
-snippet expo "export default with named var"
-/**
- *
- * @author fuyg
- * @date  `date +%Y-%m-%d`
- */
 
-function `!v expand('%:t:r')`() {
-  // TODO
-  ${VISUAL}$0
+
+snippet exportcla "export class"
+
+export class `!v expand('%:t:r')` {
+  constructor(options) {
+    // TODO
+  }
 }
 
-export default `!v expand('%:t:r')`
-endsnippet
-
-snippet export "default export without name"
-/**
- *
- * @author fuyg
- * @date  `date +%Y-%m-%d`
- */
-
-export default {
-  // TODO
-  ${VISUAL}$0
-}
 endsnippet
 
 
 
-snippet exportc "default export with named class"
-/**
- *
- * @author fuyg
- * @date  `date +%Y-%m-%d`
- */
+snippet exportclas "export sub class"
 
-class `!v expand('%:t:r')` extends ${VISUAL}$0{
+
+export class `!v expand('%:t:r')` extends SuperClass {
   constructor(options) {
     super(options)
     // TODO
   }
 }
 
-export default `!v expand('%:t:r')`
 endsnippet
-
 
 
 # vim:ft=snippets:

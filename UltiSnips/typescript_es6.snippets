@@ -1,31 +1,51 @@
 extends typescript
 
 
-snippet exporti "export default with named interface"
-/**
- *
- * @author fuyg
- * @date  `date +%Y-%m-%d`
- */
+snippet exporti "export interface"
 
-interface `!v expand('%:t:r')` {
+export interface `!v expand('%:t:r')` {
   // TODO
   ${VISUAL}$0
 }
-
-export default `!v expand('%:t:r')`
 endsnippet
 
-snippet exportix "export default with extended interface"
-/**
- *
- * @author fuyg
- * @date  `date +%Y-%m-%d`
- */
+snippet exportin "export extended interface"
 
-interface `!v expand('%:t:r')` extends ${VISUAL}$0 {
+export interface `!v expand('%:t:r')` extends ${VISUAL}$0 {
   // TODO
 }
 
-export default `!v expand('%:t:r')`
+endsnippet
+
+snippet exportc "export class with types"
+
+interface `!v expand('%:t:r')`Options {
+  // TODO
+}
+
+export class `!v expand('%:t:r')` {
+  constructor(options: `!v expand('%:t:r')`Options) {
+    // TODO
+  }
+}
+
+export type `!v expand('%:t:r')`Instance=InstanceType<typeof `!v expand('%:t:r')`>
+endsnippet
+
+
+
+snippet exportcl "export sub class with types"
+
+interface `!v expand('%:t:r')`Options extends SuperOptions {
+  // TODO
+}
+
+export class `!v expand('%:t:r')` extends SuperClass {
+  constructor(options: `!v expand('%:t:r')`Options) {
+    super(options)
+    // TODO
+  }
+}
+
+export type `!v expand('%:t:r')`Instance=InstanceType<typeof `!v expand('%:t:r')`>
 endsnippet
